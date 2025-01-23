@@ -1,10 +1,10 @@
 import { useRoutes } from "react-router-dom";
-import { Artists } from "../pages/Artists";
+import { Concert } from "../pages/Concerts";
 import { Stages } from "../pages/Stages";
 
 export const AppRoutes = () => {
   return useRoutes([
-    { path: "/artistas", element: <Artists /> },
+    { path: "/shows", element: <Concert /> },
     { path: "/palcos", element: <Stages /> },
   ]);
 };
