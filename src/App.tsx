@@ -1,4 +1,5 @@
-import "./App.css";
+import "./style/index.css";
+import Navbar from "./layouts/Navbar";
 
 import { AppRoutes } from "./routes/routes";
 
@@ -6,7 +7,7 @@ function App() {
   return (
     <>
       <header>
-        <h1>FASConnect</h1>
+        <Navbar />
       </header>
       <div>
         <AppRoutes />
