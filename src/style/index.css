@@ -6,4 +6,26 @@
     --font-primary: "Modak", "serif";
     --font-secondary: "Molengo", "serif";
   }
+
+  .parallax {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .scroller {
+    display: inline-flex;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .scroller span {
+    display: inline-block;
+    margin-right: 4rem; 
+    font-size: 2rem; 
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   
