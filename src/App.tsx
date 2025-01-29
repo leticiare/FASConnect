@@ -2,7 +2,8 @@ import "./style/index.css";
 import Navbar from "./layouts/Navbar/index";
 
 import { AppRoutes } from "./routes/routes";
-import ParallaxText from "./components/Text";
+
+import Footer from "./layouts/Footer";
 
 function App() {
   return (
@@ -12,10 +13,7 @@ function App() {
       <div>
         <AppRoutes />
       </div>
-      <footer>
-        <ParallaxText baseVelocity={2}>arte resistência tradição</ParallaxText>
-        <div></div>
-      </footer>
+      <Footer />
     </div>
   );
 }
