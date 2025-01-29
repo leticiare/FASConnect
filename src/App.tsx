@@ -2,18 +2,21 @@ import "./style/index.css";
 import Navbar from "./layouts/Navbar";
 
 import { AppRoutes } from "./routes/routes";
+import ParallaxText from "./components/Text";
 
 function App() {
   return (
-    <>
-      <header>
-        <Navbar />
-      </header>
+    <div className="bg-[url(../assets/fundo.jpg)] bg-no-repeat bg-fixed bg-cover bg-center ">
+      <Navbar />
+
       <div>
         <AppRoutes />
       </div>
-      <footer>Todos os direitos reservados.</footer>
-    </>
+      <footer>
+        <ParallaxText baseVelocity={2}>arte resistência tradição</ParallaxText>
+        <div></div>
+      </footer>
+    </div>
   );
 }
 
