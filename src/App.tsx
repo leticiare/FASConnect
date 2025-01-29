@@ -1,5 +1,5 @@
 import "./style/index.css";
-import Navbar from "./layouts/Navbar";
+import Navbar from "./layouts/Navbar/index";
 
 import { AppRoutes } from "./routes/routes";
 import ParallaxText from "./components/Text";
