@@ -4,11 +4,13 @@
 
 O FASConnect é uma plataforma web desenvolvida para facilitar a consulta da programação do Festival de Artes de São Cristóvão. Com uma interface intuitiva e responsiva, permite que os usuários encontrem informações detalhadas sobre shows, palcos e horários do evento.
 
-## Tecnologias Utilizadas
+## Principais tecnologias/libs Utilizadas
 
 - **Vite**
 - **TypeScript**
 - **React**
+- **Motion**
+- **Material UI**
 
 ## Passo a Passo
 
