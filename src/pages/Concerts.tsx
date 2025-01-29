@@ -34,7 +34,7 @@ export const Concert = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-4 w-4/5 m-auto justify-between  mb-4">
+      <div className="flex flex-wrap gap-4 w-4/5 m-auto justify-around  mb-4">
         {concerts.map((concert) => (
           <CardWithImage content={concert} />
         ))}
