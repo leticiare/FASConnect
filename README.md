@@ -26,7 +26,15 @@ npm install
 yarn install
 ```
 
-### 2. Inicie o Servidor de Desenvolvimento
+### 2. Variáveis de Ambiente
+
+Para configurar as variáveis de ambiente, crie um arquivo `.env` na raiz do projeto e adicione a seguinte variável:
+
+```bash
+VITE_API_URL=<url da api>
+```
+
+### 3. Inicie o Servidor de Desenvolvimento
 
 Para rodar o projeto em ambiente de desenvolvimento, execute:
 
