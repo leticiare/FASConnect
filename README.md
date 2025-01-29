@@ -43,3 +43,5 @@ npm run dev
 # ou
 yarn dev
 ```
+
+![Fasconnect Footer](./src/assets//footer.png)
