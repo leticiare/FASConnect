@@ -7,12 +7,12 @@ import Footer from "./layouts/Footer";
 
 function App() {
   return (
-    <div className="bg-[url(../assets/fundo.jpg)] bg-no-repeat bg-fixed bg-cover bg-center ">
+    <div className="bg-[url(../assets/fundo.jpg)] bg-no-repeat bg-fixed bg-cover bg-center h-screen flex flex-col min-h-screen ">
       <Navbar />
-
-      <div>
+      <main className="flex-grow">
         <AppRoutes />
-      </div>
+      </main>
+
       <Footer />
     </div>
   );
