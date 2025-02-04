@@ -11,9 +11,27 @@
   body {
     margin: 0; 
     padding: 0; 
-    height: 100vh; 
+    min-height: 100vh; 
     background-image: url('public/wallpaper.png');
-    background-size: cover; 
+    background-size: cover;
     background-position: center; 
     background-repeat: no-repeat; 
+    background-attachment: fixed;
+  }
+
+  .texto {
+    color: #989898;
+    height: 388px;
+    width: 470px;
+    font-size: 20px;
+    margin-left: 120vh;
+    margin-top: 100px;
+  }
+
+  .Img {
+    height: 388px;
+    width: 470px;
+    font-size: 20px;
+    margin-left: 10vh;
+    border-bottom: 100px;
   }
