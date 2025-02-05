@@ -11,9 +11,20 @@
   body {
     margin: 0; 
     padding: 0; 
-    height: 100vh; 
+    min-height: 100vh; 
     background-image: url('public/wallpaper.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+
+  footer {
+    width: 50%;
+    max-width: 100px; 
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5; 
   }
