@@ -14,14 +14,14 @@ interface LocationData {
 interface IconData {
   name: string;
   icon: string;
-  size: [number, number]; // 🔹 Exatamente dois números
+  size: [number, number];
   locations: LocationData[];
 }
 
 // Interface para os props do LayerControl
 interface LayerControlProps {
   layers: Record<string, LayerGroup>;
-  layerIcons: Record<string, string>; // 🔹 Agora está corretamente tipado
+  layerIcons: Record<string, string>;
 }
 
 // Componente para adicionar o controle de camadas dinamicamente
@@ -91,11 +91,11 @@ export const Mapa = () => {
 
   // Criar grupos de camadas e armazenar os ícones
   const layerGroups: Record<string, LayerGroup> = {};
-  const layerIcons: Record<string, string> = {}; // 🔹 Agora está corretamente declarado
+  const layerIcons: Record<string, string> = {}; // 
 
   Object.entries(iconsData).forEach(([category, value]) => {
-    const typedValue = value as unknown as IconData; // 🔹 Converte de forma segura
-    const correctedSize: [number, number] = [typedValue.size[0] ?? 25, typedValue.size[1] ?? 35]; // 🔹 Garante sempre dois números
+    const typedValue = value as unknown as IconData; 
+    const correctedSize: [number, number] = [typedValue.size[0] ?? 25, typedValue.size[1] ?? 35]; 
 
     const icon = L.icon({
       iconUrl: typedValue.icon,
@@ -111,7 +111,7 @@ export const Mapa = () => {
 
     // Adicionar grupo e armazenar ícone para exibição no menu
     layerGroups[typedValue.name] = L.layerGroup(markers);
-    layerIcons[typedValue.name] = typedValue.icon; // 🔹 Salva o caminho do ícone para exibição no menu
+    layerIcons[typedValue.name] = typedValue.icon; // Salva o caminho do ícone para exibição no menu
   });
 
   return (
