@@ -1,8 +1,9 @@
 {
     "police": {
+        "name": "Polícia",
         "icon": "/public/icons/carro-de-policia.png",
         "size": [
-            25,
+            35,
             35
         ],
         "locations": [
@@ -57,9 +58,10 @@
         ]
     },
     "medical": {
+        "name": "Atendimento Médico",
         "icon": "/public/icons/ambulancia.png",
         "size": [
-            25,
+            35,
             35
         ],
         "locations": [
@@ -98,9 +100,10 @@
         ]
     },
     "bathroom": {
+        "name": "Banheiro Público",
         "icon": "/public/icons/banheiro-publico.png",
         "size": [
-            25,
+            35,
             35
         ],
         "locations": [
@@ -139,6 +142,7 @@
         ]
     },
     "stage": {
+        "name": "Palco",
         "icon": "/public/icons/palco.png",
         "size": [
             30,
@@ -172,9 +176,10 @@
         ]
     },
     "food": {
+        "name": "Alimentação",
         "icon": "/public/icons/prato.png",
         "size": [
-            25,
+            35,
             35
         ],
         "locations": [
@@ -245,9 +250,10 @@
         ]
     },
     "art": {
+        "name": "Arte e Cultura",
         "icon": "/public/icons/palete.png",
         "size": [
-            25,
+            35,
             35
         ],
         "locations": [
@@ -262,7 +268,7 @@
             {
                 "label": "Ateliê ao Vivo",
                 "position": [
-                    -11.014251,
+                    -11.014351,
                     -37.2066
                 ],
                 "description": "Pintores criando obras ao vivo diante do público."
