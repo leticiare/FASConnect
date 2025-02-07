@@ -10,6 +10,7 @@ export default function NavbarLinks() {
         <NavLink to="/">Local</NavLink>
         <NavLink to="/palcos">Palco</NavLink>
         <NavLink to="/shows">Shows</NavLink>
+        <NavLink to="/Map">Mapa</NavLink>
 
         <Fab variant="extended" onClick={() => navigate("/")}>
           Minha Programação
