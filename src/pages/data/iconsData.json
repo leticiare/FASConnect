@@ -1,0 +1,310 @@
+{
+    "police": {
+        "name": "Polícia",
+        "icon": "/public/icons/carro-de-policia.png",
+        "size": [
+            35,
+            35
+        ],
+        "locations": [
+            {
+                "label": "Posto Policial 1",
+                "position": [
+                    -11.013413,
+                    -37.207056
+                ],
+                "description": "Ponto fixo de apoio policial para segurança do evento."
+            },
+            {
+                "label": "Posto Policial 2",
+                "position": [
+                    -11.013856,
+                    -37.205576
+                ],
+                "description": "Equipe policial disponível para emergências e patrulhamento."
+            },
+            {
+                "label": "Posto Policial 3",
+                "position": [
+                    -11.015146,
+                    -37.207298
+                ],
+                "description": "Monitoramento preventivo e auxílio à organização."
+            },
+            {
+                "label": "Posto Policial 4",
+                "position": [
+                    -11.015309,
+                    -37.206541
+                ],
+                "description": "Unidade móvel da polícia para suporte rápido."
+            },
+            {
+                "label": "Posto Policial 5",
+                "position": [
+                    -11.014135,
+                    -37.205088
+                ],
+                "description": "Ponto estratégico de segurança e fiscalização."
+            },
+            {
+                "label": "Posto Policial 6",
+                "position": [
+                    -11.01209,
+                    -37.207161
+                ],
+                "description": "Patrulha designada para controle do fluxo de visitantes."
+            }
+        ]
+    },
+    "medical": {
+        "name": "Atendimento Médico",
+        "icon": "/public/icons/ambulancia.png",
+        "size": [
+            35,
+            35
+        ],
+        "locations": [
+            {
+                "label": "Unidade Médica 1",
+                "position": [
+                    -11.013519,
+                    -37.205801
+                ],
+                "description": "Equipe de emergência para atendimento rápido."
+            },
+            {
+                "label": "Unidade Médica 2",
+                "position": [
+                    -11.013371,
+                    -37.207362
+                ],
+                "description": "Posto de atendimento de primeiros socorros."
+            },
+            {
+                "label": "Unidade Médica 3",
+                "position": [
+                    -11.015567,
+                    -37.207577
+                ],
+                "description": "Ambulância de prontidão para casos urgentes."
+            },
+            {
+                "label": "Unidade Médica 4",
+                "position": [
+                    -11.014029,
+                    -37.204208
+                ],
+                "description": "Suporte médico disponível para orientações e atendimentos."
+            }
+        ]
+    },
+    "bathroom": {
+        "name": "Banheiro Público",
+        "icon": "/public/icons/banheiro-publico.png",
+        "size": [
+            35,
+            35
+        ],
+        "locations": [
+            {
+                "label": "Banheiro Público 1",
+                "position": [
+                    -11.013045,
+                    -37.205769
+                ],
+                "description": "Banheiro masculino e feminino com acessibilidade."
+            },
+            {
+                "label": "Banheiro Público 2",
+                "position": [
+                    -11.014461,
+                    -37.207464
+                ],
+                "description": "Sanitários equipados para conforto dos visitantes."
+            },
+            {
+                "label": "Banheiro Público 3",
+                "position": [
+                    -11.015846,
+                    -37.206219
+                ],
+                "description": "Espaço com higiene garantida e manutenção contínua."
+            },
+            {
+                "label": "Banheiro Público 4",
+                "position": [
+                    -11.015135,
+                    -37.205774
+                ],
+                "description": "Sanitário próximo às áreas de alimentação."
+            }
+        ]
+    },
+    "stage": {
+        "name": "Palco",
+        "icon": "/public/icons/palco.png",
+        "size": [
+            30,
+            40
+        ],
+        "locations": [
+            {
+                "label": "Palco Frei Santa Cecília",
+                "position": [
+                    -11.015609,
+                    -37.206922
+                ],
+                "description": "Palco principal do evento com shows e apresentações."
+            },
+            {
+                "label": "Palco Samba na Bica",
+                "position": [
+                    -11.014214,
+                    -37.207652
+                ],
+                "description": "Espaço dedicado ao samba e ritmos tradicionais."
+            },
+            {
+                "label": "Palco João Bebe Água",
+                "position": [
+                    -11.013403,
+                    -37.205329
+                ],
+                "description": "Apresentações musicais e performances culturais diversas."
+            }
+        ]
+    },
+    "food": {
+        "name": "Alimentação",
+        "icon": "/public/icons/prato.png",
+        "size": [
+            35,
+            35
+        ],
+        "locations": [
+            {
+                "label": "Pastelaria do João",
+                "position": [
+                    -11.013677,
+                    -37.2066
+                ],
+                "description": "Pastéis artesanais de diversos sabores."
+            },
+            {
+                "label": "Empadaria Delícia",
+                "position": [
+                    -11.013866,
+                    -37.20659
+                ],
+                "description": "Empadas de frango, camarão e queijo."
+            },
+            {
+                "label": "Churrasquinho do Zé",
+                "position": [
+                    -11.014035,
+                    -37.206879
+                ],
+                "description": "Espetinhos variados e acompanhamentos."
+            },
+            {
+                "label": "Sorveteria Tropical",
+                "position": [
+                    -11.014482,
+                    -37.205704
+                ],
+                "description": "Sorvetes e picolés artesanais."
+            },
+            {
+                "label": "Barraca da Tapioca",
+                "position": [
+                    -11.014019,
+                    -37.207496
+                ],
+                "description": "Tapiocas recheadas doces e salgadas."
+            },
+            {
+                "label": "Hamburgueria Gourmet",
+                "position": [
+                    -11.013524,
+                    -37.207512
+                ],
+                "description": "Hambúrgueres artesanais e fritas."
+            },
+            {
+                "label": "Café & Pães",
+                "position": [
+                    -11.013719,
+                    -37.20755
+                ],
+                "description": "Pães frescos, bolos e cafés especiais."
+            },
+            {
+                "label": "Doceria Doce Encanto",
+                "position": [
+                    -11.013803,
+                    -37.207319
+                ],
+                "description": "Doces finos e sobremesas irresistíveis."
+            }
+        ]
+    },
+    "art": {
+        "name": "Arte e Cultura",
+        "icon": "/public/icons/palete.png",
+        "size": [
+            35,
+            35
+        ],
+        "locations": [
+            {
+                "label": "Exposição de Pintura",
+                "position": [
+                    -11.014093,
+                    -37.207212
+                ],
+                "description": "Mostra de artistas locais com pinturas temáticas."
+            },
+            {
+                "label": "Ateliê ao Vivo",
+                "position": [
+                    -11.014351,
+                    -37.2066
+                ],
+                "description": "Pintores criando obras ao vivo diante do público."
+            },
+            {
+                "label": "Esculturas ao Ar Livre",
+                "position": [
+                    -11.014072,
+                    -37.206219
+                ],
+                "description": "Exibição de esculturas feitas com materiais recicláveis."
+            },
+            {
+                "label": "Teatro de Rua",
+                "position": [
+                    -11.015551,
+                    -37.207169
+                ],
+                "description": "Apresentações teatrais interativas com o público."
+            },
+            {
+                "label": "Museu Histórico",
+                "position": [
+                    -11.014145,
+                    -37.205377
+                ],
+                "description": "Espaço dedicado à história e cultura local."
+            },
+            {
+                "label": "Mostra Fotográfica",
+                "position": [
+                    -11.013682,
+                    -37.205141
+                ],
+                "description": "Galeria ao ar livre com fotos históricas e contemporâneas."
+            }
+        ]
+    }
+}
