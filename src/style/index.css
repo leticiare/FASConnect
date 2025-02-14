@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Molengo&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 @theme {
@@ -6,7 +7,6 @@
     --font-primary: "Modak", "serif";
 
   }
-  
 
   body {
     margin: 0; 
@@ -19,13 +19,8 @@
     background-attachment: fixed;
   }
 
-  .texto {
-    color: #989898;
-    height: 388px;
-    width: 470px;
-    font-size: 20px;
-    margin-left: 120vh;
-    margin-top: 100px;
+  .fasc-text {
+    font-family: "Molengo", sans-serif;
   }
 
   .Img {
