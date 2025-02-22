@@ -16,7 +16,7 @@ function App() {
       </div>
 
       {/* Definindo a div das imagens e texto da Landing Page */}
-      <div className="min-h-screen flex flex-col mt-12 md:flex-row items-center md:items-start justify-between p-6 md:p-12 gap-5">
+      <div className="min-h-screen flex flex-col mt-12 md:flex-row items-center md:items-start justify-between p-6 md:p-12">
 
         {/* Definindo a div que conterá as imagens */}
         <div className="relative w-full md:w-1/2 flex flex-col justify-center md:justify-start p-5">
@@ -31,10 +31,10 @@ function App() {
           </div>
         </div>
 
-        {/* Texto na direita */}
-        <div className="w-full md:w-1/2 mt-12 md:mt-0 text-center md:text-left ml-30">
+        {/* Container do texto da direita */}
+        <div className="w-full md:w-1/2 mt-12 md:mt-0 text-center md:text-left md:pl-22">
           <div className="fasc-text">
-            <p className="text-lg md:text-xl text-neutral-500 leading-relaxed w-1 md:w-6/10">
+            <p className="text-lg md:text-xl text-neutral-500 leading-relaxed w-full md:w-8/12">
               Em 2077, o Festival de Artes de São Cristóvão (FASC) completa 105 anos de celebração da cultura, da arte e da tradição. Ao longo de mais de um século, o FASC se consolidou como um dos maiores e mais importantes encontros artísticos do mundo, unindo gerações, estilos e manifestações culturais de todos os cantos do Brasil.
               <br /> <br /> Venha celebrar conosco 105 anos de arte e resistência. O FASC continua a ser o coração pulsante da cultura global.
             </p>
