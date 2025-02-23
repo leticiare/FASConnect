@@ -45,10 +45,10 @@ function App() {
           { /* Div para construir o botão que direciona as outras informações contidas no site*/ }
           <div className="flex justify-center md:justify-start mt-8">
             <button
-              className="py-4 px-10 rounded-3xl border border-white text-center text-sm text-white transition-all shadow-md
-              hover:shadow-lg active:bg-neutral-900 active:shadow-none
-              disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
-              Conheça as atrações
+              className="py-3 px-16 rounded-3xl border border-white text-center text-lg text-white transition-all shadow-md cursor-pointer
+              hover:shadow-lg active:bg-neutral-900 active:shadow-none"
+              type="button">
+              Conheça as atrações 
             </button>
           </div>
 
@@ -56,6 +56,7 @@ function App() {
 
 
       </div>
+
 
       
 
