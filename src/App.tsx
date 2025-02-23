@@ -41,19 +41,23 @@ function App() {
               <br /> <br /> Venha celebrar conosco 105 anos de arte e resistência. O FASC continua a ser o coração pulsante da cultura global.
             </p>
           </div>
+
+          { /* Div para construir o botão que direciona as outras informações contidas no site*/ }
+          <div className="flex justify-center md:justify-start mt-8">
+            <button
+              className="py-4 px-10 rounded-3xl border border-white text-center text-sm text-white transition-all shadow-md
+              hover:shadow-lg active:bg-neutral-900 active:shadow-none
+              disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              Conheça as atrações
+            </button>
+          </div>
+
         </div>
+
 
       </div>
 
-      { /* Div para construir o botão que direciona as outras informações contidas no site*/ }
-      <div className="min-h-screen flex flex-col md:flex-row items-center md:items-start justify-between p-6">
-        <button
-          className="py-4 px-10 rounded-3xl border border-white text-center text-sm text-white transition-all shadow-md
-                    hover:shadow-lg active:bg-neutral-900 active:shadow-none
-                    disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
-          Conheça as atrações
-        </button>
-</div>
+      
 
     </>
   );
