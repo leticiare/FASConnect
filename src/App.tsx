@@ -19,7 +19,7 @@ function App() {
       <div className="min-h-screen flex flex-col mt-12 md:flex-row items-center md:items-start justify-between p-6 md:p-12">
 
         { /* Definindo a div que conterá as imagens */ }
-        <div className="relative w-full md:w-1/2 flex flex-col justify-center md:justify-start p-5">
+        <div className="w-full md:w-1/2 justify-center md:justify-start p-5">
           { /* Primeira imagem */ }
           <div className="w-full flex justify-center mb-8">
             <img src={NSCimg} alt="NSC" className="w-2/3 md:w-2/3 z-10" />
