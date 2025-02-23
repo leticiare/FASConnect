@@ -49,6 +49,7 @@ function App() {
               hover:shadow-lg active:bg-neutral-900 active:shadow-none"
               type="button">
               Conheça as atrações 
+              <span className="ml-4 text-xl glow"> &gt; </span>
             </button>
           </div>
 
