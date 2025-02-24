@@ -1,0 +1,14 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .MuiPickersLayout-root {
+    border: none !important;
+  }
+
+  @media (max-width: 425px) {
+    .css-1pnfug6-MuiPaper-root {
+      padding: 0px !important;
+    }
+  }
+  

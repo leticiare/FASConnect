@@ -14,54 +14,75 @@ import {
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import SortByAlphaIcon from "@mui/icons-material/SortByAlpha";
 import { useEffect, useState, useMemo } from "react";
+import dayjs, { Dayjs } from "dayjs";
 import { Concert as ConcertType } from "../types/Concerts";
 import { getConcerts } from "../services/api";
 import CardWithImage from "../components/CardIWithmage";
+import Calendar from "../components/Calendar"; // ✅ Agora usando o nome correto do componente
 import theme from "../style/theme";
+import "../style/calendarStyles.css";
 
 export const Concert = () => {
   const [concerts, setConcerts] = useState<ConcertType[]>([]);
+  const [originalConcerts, setOriginalConcerts] = useState<ConcertType[]>([]); // ✅ Lista completa de eventos
   const [loading, setLoading] = useState<boolean>(true);
   const [sortOption, setSortOption] = useState<"alpha" | "newest" | "oldest">(
     "alpha"
   );
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const [selectedDate, setSelectedDate] = useState<Dayjs | null>(dayjs());
 
   useEffect(() => {
     const fetchConcerts = async () => {
       const res = await getConcerts();
       setConcerts(res);
+      setOriginalConcerts(res); // ✅ Armazena os shows originais
       setLoading(false);
     };
     fetchConcerts();
   }, []);
 
-  // Filtra os shows pelo nome baseado no termo de pesquisa
+  const handleFilterByDate = (date: Dayjs | null) => {
+    if (date) {
+      const formattedDate = dayjs(date).format("YYYY-MM-DD");
+      setConcerts(
+        originalConcerts.filter(
+          (concert) =>
+            dayjs(concert.startDate).format("YYYY-MM-DD") === formattedDate
+        )
+      );
+      setPage(1); // ✅ Reinicia para a primeira página ao filtrar
+    }
+  };
+
+  const handleClearFilter = () => {
+    setConcerts(originalConcerts); // ✅ Restaura os shows originais
+    setPage(1); // ✅ Reinicia para a primeira página ao limpar o filtro
+  };
+
   const filteredConcerts = concerts.filter((concert) =>
     concert.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Ordena os shows de acordo com a opção de ordenação
   const sortedConcerts = useMemo(() => {
     return [...filteredConcerts].sort((a, b) => {
       if (sortOption === "alpha") {
-        return a.name.localeCompare(b.name); // Ordenação por nome
+        return a.name.localeCompare(b.name);
       }
       if (sortOption === "newest") {
         return (
           new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
-        ); // Mais recentes primeiro
+        );
       }
       if (sortOption === "oldest") {
         return (
           new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
-        ); // Mais antigos primeiro
+        );
       }
       return 0;
     });
   }, [filteredConcerts, sortOption]);
 
-  // Paginação
   const itemsPerPage = 6;
   const [page, setPage] = useState(1);
   const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
@@ -75,8 +96,8 @@ export const Concert = () => {
   );
 
   return (
-    <div className="h-full flex flex-col">
-      <div className="w-4/5 m-auto text-center my-8">
+    <div className="h-full flex flex-col items-center">
+      <div className="w-full max-w-4xl text-center my-8 px-4">
         <Typography
           variant="h3"
           fontFamily="Delius Unicase"
@@ -89,10 +110,34 @@ export const Concert = () => {
           Abaixo, confira os artistas mais aclamados que vão agitar o FASC 2077!
           Veja as datas, horários e palcos dos shows!
         </p>
-        <div className="flex w-1/2 gap-2 mx-auto mt-8 justify-center bg-gray-300 p-2 rounded-lg shadow-md">
-          {/* SearchBar (Autocomplete) */}
+
+        {/* 📌 Componente do calendário com eventos marcados */}
+        <div className="flex justify-center my-6">
+          <Paper
+            sx={{
+              backgroundColor: "rgba(150, 150, 150, 0.2)", // Fundo escuro
+              backdropFilter: "blur(10px)",
+              borderRadius: 3,
+              boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+              padding: 2,
+              maxWidth: "550px", // ✅ Aumentado para se ajustar melhor
+            }}
+          >
+            <Calendar
+              concerts={concerts} // ✅ Apenas os shows filtrados são exibidos
+              originalConcerts={originalConcerts} // ✅ Mantém os pontos vermelhos no calendário
+              selectedDate={selectedDate}
+              setSelectedDate={setSelectedDate}
+              onFilterByDate={handleFilterByDate}
+              onClearFilter={handleClearFilter}
+            />
+          </Paper>
+        </div>
+
+        {/* 🔍 Seção de busca e filtros */}
+        <div className="flex flex-col sm:flex-row w-full max-w-2xl gap-2 mx-auto mt-8 justify-center bg-gray-300 p-2 rounded-lg shadow-md">
           <Autocomplete
-            options={concerts.map((concert) => concert.name)}
+            options={originalConcerts.map((concert) => concert.name)} // ✅ Usa a lista completa para buscar shows
             value={searchTerm}
             fullWidth
             onChange={(_event, newValue) => {
@@ -108,8 +153,6 @@ export const Concert = () => {
               />
             )}
           />
-
-          {/* Filtro de Ordenação */}
           <FormControl className="w-full max-w-xs">
             <InputLabel id="sortSelectLabel" sx={{ color: "gray" }}>
               Ordenar
@@ -138,8 +181,6 @@ export const Concert = () => {
           </FormControl>
         </div>
       </div>
-
-      {/* Carregando ou Exibindo os Shows */}
       {loading ? (
         <div className="h-screen flex justify-center items-center">
           <CircularProgress color="inherit" />
@@ -152,9 +193,9 @@ export const Concert = () => {
         </div>
       )}
 
-      {/* Paginação */}
+      {/* 📌 Paginação dos shows */}
       <ThemeProvider theme={theme}>
-        <div className="flex justify-center my-8">
+        <div className="flex justify-center my-8 w-full">
           <Paper elevation={3} className="p-2 rounded-lg">
             <Pagination
               count={Math.ceil(sortedConcerts.length / itemsPerPage)}
