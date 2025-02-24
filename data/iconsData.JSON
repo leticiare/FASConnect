@@ -1,0 +1,50 @@
+{
+    "police": {
+      "icon": "/icons/carro-de-policia.png",
+      "size": [25, 35],
+      "locations": [
+        { "label": "Polícia 1", "position": [-11.013500, -37.206500] },
+        { "label": "Polícia 2", "position": [-11.013600, -37.206600] }
+      ]
+    },
+    "medical": {
+      "icon": "/icons/ambulancia.png",
+      "size": [25, 35],
+      "locations": [
+        { "label": "Apoio Médico 1", "position": [-11.013700, -37.206700] },
+        { "label": "Apoio Médico 2", "position": [-11.013800, -37.206800] }
+      ]
+    },
+    "bathroom": {
+      "icon": "/icons/banheiro-publico.png",
+      "size": [25, 35],
+      "locations": [
+        { "label": "Banheiro 1", "position": [-11.013900, -37.206900] },
+        { "label": "Banheiro 2", "position": [-11.014000, -37.207000] }
+      ]
+    },
+    "stage": {
+      "icon": "/icons/palco.png",
+      "size": [30, 40],
+      "locations": [
+        { "label": "Palco Principal", "position": [-11.014100, -37.207100] }
+      ]
+    },
+    "food": {
+      "icon": "/icons/prato.png",
+      "size": [25, 35],
+      "locations": [
+        { "label": "Comida 1", "position": [-11.014200, -37.207200] },
+        { "label": "Comida 2", "position": [-11.014300, -37.207300] }
+      ]
+    },
+    "art": {
+      "icon": "/icons/palete.png",
+      "size": [25, 35],
+      "locations": [
+        { "label": "Evento Artístico 1", "position": [-11.014400, -37.207400] },
+        { "label": "Evento Artístico 2", "position": [-11.014500, -37.207500] }
+      ]
+    }
+  }
+  
