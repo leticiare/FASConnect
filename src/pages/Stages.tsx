@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { getConcerts, getStages } from "../services/api";
 import { Concert } from "../types/Concerts";
@@ -27,7 +27,7 @@ export const Stages = () => {
   }, []);
   return (
     <>
-      <div className="h-full flex flex-col">
+      <div className="h-full flex flex-col p-2">
         <div className="w-4/5 m-auto text-center my-8">
           <Typography
             variant="h3"
@@ -43,13 +43,13 @@ export const Stages = () => {
             horários e artistas que vão passar por cada um deles!
           </p>
         </div>
-        <Grid container spacing={3} justifyContent="center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 max-w-screen-lg mx-auto">
           {stages.map((stage, index) => (
-            <Grid item key={index}>
+            <div key={index} className="flex justify-center w-full">
               <StageCard stage={stage} artists={concerts} />
-            </Grid>
+            </div>
           ))}
-        </Grid>
+        </div>
       </div>
     </>
   );
