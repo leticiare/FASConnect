@@ -49,7 +49,7 @@ export default function NavbarLinks() {
 
             <MenuItem
               component={Link}
-              to="/favorites"
+              to="/favoritos"
               onClick={handleMenuClose}
             >
               Minha Programação
@@ -64,11 +64,7 @@ export default function NavbarLinks() {
 
           <NavLink to="/Map">Mapa</NavLink>
 
-          <Fab
-            variant="extended"
-            size="small"
-            onClick={() => navigate("/favorites")}
-          >
+          <Fab variant="extended" onClick={() => navigate("/favoritos")}>
             Minha Programação
           </Fab>
         </div>
