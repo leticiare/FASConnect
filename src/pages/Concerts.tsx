@@ -1,14 +1,24 @@
 import {
   CircularProgress,
+  FormControl,
+  InputLabel,
+  MenuItem,
   Pagination,
+  Select,
+  TextField,
+  Autocomplete,
   ThemeProvider,
   Typography,
+  Paper,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import SortByAlphaIcon from "@mui/icons-material/SortByAlpha";
+import { useEffect, useState, useMemo } from "react";
 import { Concert as ConcertType } from "../types/Concerts";
 import { getConcerts } from "../services/api";
 import CardWithImage from "../components/CardIWithmage";
 import theme from "../style/theme";
+
 export const Concert = () => {
   const [concerts, setConcerts] = useState<ConcertType[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -67,19 +77,18 @@ export const Concert = () => {
   return (
     <div className="h-full flex flex-col">
       <div className="w-4/5 m-auto text-center my-8">
-        <div className="font-secondary">
-          <Typography
-            variant="h3"
-            fontFamily="Delius Unicase"
-            component="div"
-            color="#fff"
-          >
-            Shows
-          </Typography>
-          <p className="text-white text-xl">
-            Abaixo, confira os artistas mais aclamados que vão agitar o FASC
-            2077! Veja as datas, horários e palcos dos shows!
-          </p>
+        <Typography
+          variant="h3"
+          fontFamily="Delius Unicase"
+          component="div"
+          color="#fff"
+        >
+          Shows
+        </Typography>
+        <p className="text-white text-xl">
+          Abaixo, confira os artistas mais aclamados que vão agitar o FASC 2077!
+          Veja as datas, horários e palcos dos shows!
+        </p>
         <div className="flex w-1/2 gap-2 mx-auto mt-8 justify-center bg-gray-300 p-2 rounded-lg shadow-md">
           {/* SearchBar (Autocomplete) */}
           <Autocomplete
@@ -129,28 +138,33 @@ export const Concert = () => {
           </FormControl>
         </div>
       </div>
+
+      {/* Carregando ou Exibindo os Shows */}
       {loading ? (
-        <div className="h-1/2 flex justify-center items-center">
+        <div className="h-screen flex justify-center items-center">
           <CircularProgress color="inherit" />
         </div>
       ) : (
         <div className="flex flex-wrap gap-4 w-4/5 m-auto justify-around mb-4">
-          {displayedConcerts.map((concert) => (
-            <CardWithImage content={concert} />
+          {displayedConcerts.map((concert, index) => (
+            <CardWithImage content={concert} key={index} />
           ))}
         </div>
       )}
-      <div className="flex justify-center my-8 ">
-        <ThemeProvider theme={theme}>
-          <Pagination
-            count={Math.ceil(concerts.length / itemsPerPage)}
-            page={page}
-            onChange={handleChange}
-            color="standard"
-          />
+
+      {/* Paginação */}
+      <ThemeProvider theme={theme}>
+        <div className="flex justify-center my-8">
+          <Paper elevation={3} className="p-2 rounded-lg">
+            <Pagination
+              count={Math.ceil(sortedConcerts.length / itemsPerPage)}
+              page={page}
+              onChange={handleChange}
+              color="standard"
+            />
           </Paper>
         </div>
-        </ThemeProvider>
+      </ThemeProvider>
     </div>
   );
 };
