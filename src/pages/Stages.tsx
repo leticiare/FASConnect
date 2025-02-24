@@ -46,7 +46,12 @@ export const Stages = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 max-w-screen-lg mx-auto">
           {stages.map((stage, index) => (
             <div key={index} className="flex justify-center w-full">
-              <StageCard stage={stage} artists={concerts} />
+              <StageCard
+                stage={stage}
+                artists={concerts.filter(
+                  (concert) => concert.location == stage.name
+                )}
+              />
             </div>
           ))}
         </div>
