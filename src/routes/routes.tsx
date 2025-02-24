@@ -9,6 +9,6 @@ export const AppRoutes = () => {
     { path: "/shows", element: <Concert /> },
     { path: "/palcos", element: <Stages /> },
     { path: "/map", element: <Mapa /> },
-    { path: "/favorites", element: <Favorites /> },
+    { path: "/favoritos", element: <Favorites /> },
   ]);
 };
