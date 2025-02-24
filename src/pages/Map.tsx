@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L, { LatLngTuple, LayerGroup } from "leaflet";
 import { useEffect } from "react";
-import iconsData from "./data/iconsData.json";
+import iconsData from "../data/iconsData.json";
 
 // Interface para os dados de localização
 interface LocationData {
