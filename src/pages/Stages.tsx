@@ -38,9 +38,9 @@ export const Stages = () => {
             Palcos
           </Typography>
           <p className="text-white text-xl">
-            Abaixo, conheça os palcos queAbaixo, conheça os palcos que vão
-            receber as maiores atrações do FASC 2077! Confira as programações,
-            horários e artistas que vão passar por cada um deles!
+            Abaixo, conheça os palcos que vão receber as maiores atrações do
+            FASC 2077! Confira as programações, horários e artistas que vão
+            passar por cada um deles!
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 max-w-screen-lg mx-auto">
