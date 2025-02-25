@@ -18,15 +18,15 @@ function App() {
       <div className="min-h-screen flex flex-col md:flex-row items-center md:items-start justify-between p-6 md:p-12 mt-12">
 
         { /* Definindo a div que conterá as imagens */ }
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start p-6">
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start mt-4">
           { /* Primeira imagem */ }
-          <div className="w-full flex justify-center mb-4">
-            <img src={NSCimg} alt="NSC" className="max-w-full h-auto md:w-2/3" />
+          <div className="w-full flex justify-center">
+            <img src={NSCimg} alt="NSC" className="max-w-3/4 h-auto md:w-2/3" />
           </div>
           
           { /* Segunda imagem */ }
-          <div className="w-full flex justify-center">
-            <img src={img2077} alt="2077" className="max-w-full h-auto md:w-2/3" />
+          <div className="w-full flex justify-center mt-3">
+            <img src={img2077} alt="2077" className="max-w-5/8 h-auto md:w-2/3 shadow-xl shadow-neutral-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-neutral-400/50" />
           </div>
         </div>
 
