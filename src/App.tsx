@@ -3,6 +3,7 @@ import Navbar from "./layouts/Navbar";
 import NSCimg from "../public/NSCimg.png";
 import img2077 from "../public/2077.png";
 import { AppRoutes } from "./routes/routes";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -41,13 +42,15 @@ function App() {
 
           { /* Botão centralizado no mobile e abaixo do texto na Landing Page */ }
           <div className="flex justify-center items-center  mt-12 w-full">
-            <button
-              className="py-3 px-11 rounded-3xl border border-white text-center text-lg text-white cursor-pointer transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110
-                          hover:shadow-lg active:bg-neutral-900 active:opacity-80 active:shadow-none shadow-neutral-700 font-medium"
-              type="button">
-              Conheça as atrações 
-              <span className="ml-2 text-xl glow animate-pulse"> &gt; </span>
-            </button>
+            <Link to="/shows"> {/* Redireciona para a rota dos shows */}
+              <button
+                className="py-3 px-11 rounded-3xl border border-white text-center text-lg text-white transition delay-100 duration-300 ease-in-out hover:-translate-y-1
+                           hover:scale-110 hover:shadow-lg active:bg-neutral-900 active:opacity-80 active:shadow-none shadow-neutral-700 font-medium cursor-pointer"
+                type="button">
+                Conheça as atrações 
+                <span className="ml-2 text-xl glow animate-pulse"> &gt; </span>
+              </button>
+            </Link>
           </div>
 
         </div>
