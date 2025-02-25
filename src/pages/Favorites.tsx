@@ -15,6 +15,7 @@ import { DeleteOutline } from "@mui/icons-material";
 import useFavorites from "../hooks/useFavorites";
 import html2canvas from "html2canvas";
 import { Concert } from "../types/Concerts";
+import { formatDateTime } from "../utils/dateUtils";
 
 const sortByDate = (a: any, b: any) =>
   new Date(a.startDate).getTime() - new Date(b.startDate).getTime();
@@ -98,7 +99,7 @@ const FavoriteArtists = () => {
                     >
                       <ListItemText
                         primary={artist.name}
-                        secondary={`📅 ${artist.startDate}`}
+                        secondary={`📅 ${formatDateTime(artist.startDate)}`}
                       />
                       {!isSaving && (
                         <ListItemSecondaryAction>
