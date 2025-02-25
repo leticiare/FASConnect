@@ -157,17 +157,43 @@ export const Concert = () => {
           </FormControl>
         </div>
       </div>
-      {loading ? (
-        <div className="h-screen flex justify-center items-center">
-          <CircularProgress color="inherit" />
+      <div className="flex flex-col lg:flex-row justify-center lg:items-start items-center gap-6">
+        {/* 📌 Componente do calendário com eventos marcados */}
+        <div className="flex justify-center my-6 w-4/5">
+          <Paper
+            sx={{
+              backgroundColor: "rgba(150, 150, 150, 0.2)", // Fundo escuro
+              backdropFilter: "blur(10px)",
+              borderRadius: 3,
+              boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+              padding: 2,
+              maxWidth: "550px", // Ajustado para telas maiores
+              width: "100%", // Para que o calendário ocupe toda a largura disponível
+            }}
+          >
+            <Calendar
+              concerts={concerts} // ✅ Apenas os shows filtrados são exibidos
+              originalConcerts={originalConcerts} // ✅ Mantém os pontos vermelhos no calendário
+              selectedDate={selectedDate}
+              setSelectedDate={setSelectedDate}
+              onFilterByDate={handleFilterByDate}
+              onClearFilter={handleClearFilter}
+            />
+          </Paper>
         </div>
-      ) : (
-        <div className="flex flex-wrap gap-4 w-4/5 m-auto justify-around mb-4">
-          {displayedConcerts.map((concert, index) => (
-            <CardWithImage content={concert} key={index} />
-          ))}
-        </div>
-      )}
+
+        {loading ? (
+          <div className="h-screen flex justify-between items-center">
+            <CircularProgress color="inherit" />
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-4/5 m-auto mb-4">
+            {displayedConcerts.map((concert, index) => (
+              <CardWithImage content={concert} key={index} />
+            ))}
+          </div>
+        )}
+      </div>
 
       {/* 📌 Paginação dos shows */}
       <ThemeProvider theme={theme}>
@@ -182,28 +208,6 @@ export const Concert = () => {
           </Paper>
         </div>
       </ThemeProvider>
-              {/* 📌 Componente do calendário com eventos marcados */}
-              <div className="flex justify-center my-6">
-          <Paper
-            sx={{
-              backgroundColor: "rgba(150, 150, 150, 0.2)", // Fundo escuro
-              backdropFilter: "blur(10px)",
-              borderRadius: 3,
-              boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-              padding: 2,
-              maxWidth: "550px", // ✅ Aumentado para se ajustar melhor
-            }}
-          >
-            <Calendar
-              concerts={concerts} // ✅ Apenas os shows filtrados são exibidos
-              originalConcerts={originalConcerts} // ✅ Mantém os pontos vermelhos no calendário
-              selectedDate={selectedDate}
-              setSelectedDate={setSelectedDate}
-              onFilterByDate={handleFilterByDate}
-              onClearFilter={handleClearFilter}
-            />
-          </Paper>
-        </div>
     </div>
   );
 };
