@@ -97,6 +97,7 @@ export const Mapa = () => {
   const layerIcons: Record<string, string> = {}; //
 
   Object.entries(iconsData).forEach(([category, value]) => {
+    console.log(category);
     const typedValue = value as unknown as IconData;
     const correctedSize: [number, number] = [
       typedValue.size[0] ?? 25,
