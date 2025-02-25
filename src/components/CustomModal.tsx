@@ -17,11 +17,13 @@ const CustomModal = ({ open, onClose, children }: ModalProps) => {
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          width: 400,
+          width: { xs: "90%", sm: "75%", md: "50%", lg: "40%" },
           bgcolor: "background.paper",
           boxShadow: 24,
-          p: 3,
+          p: { xs: 2, sm: 3, md: 4 },
           borderRadius: 2,
+          maxHeight: "90vh",
+          overflowY: "auto",
         }}
       >
         <IconButton
