@@ -31,9 +31,9 @@ export const Stages = () => {
         <div className="w-4/5 m-auto text-center my-8">
           <Typography
             variant="h3"
-            fontFamily="Delius Unicase"
             component="div"
             color="#fff"
+            fontFamily="Modak"
           >
             Palcos
           </Typography>

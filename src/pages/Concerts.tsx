@@ -97,12 +97,12 @@ export const Concert = () => {
 
   return (
     <div className="h-full flex flex-col items-center">
-      <div className="w-full max-w-4xl text-center my-8 px-4">
+      <div className="w-full max-w-4xl text-center my-8 px-4 ">
         <Typography
           variant="h3"
-          fontFamily="Delius Unicase"
           component="div"
           color="#fff"
+          fontFamily="Modak"
         >
           Shows
         </Typography>
@@ -110,30 +110,6 @@ export const Concert = () => {
           Abaixo, confira os artistas mais aclamados que vão agitar o FASC 2077!
           Veja as datas, horários e palcos dos shows!
         </p>
-
-        {/* 📌 Componente do calendário com eventos marcados */}
-        <div className="flex justify-center my-6">
-          <Paper
-            sx={{
-              backgroundColor: "rgba(150, 150, 150, 0.2)", // Fundo escuro
-              backdropFilter: "blur(10px)",
-              borderRadius: 3,
-              boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-              padding: 2,
-              maxWidth: "550px", // ✅ Aumentado para se ajustar melhor
-            }}
-          >
-            <Calendar
-              concerts={concerts} // ✅ Apenas os shows filtrados são exibidos
-              originalConcerts={originalConcerts} // ✅ Mantém os pontos vermelhos no calendário
-              selectedDate={selectedDate}
-              setSelectedDate={setSelectedDate}
-              onFilterByDate={handleFilterByDate}
-              onClearFilter={handleClearFilter}
-            />
-          </Paper>
-        </div>
-
         {/* 🔍 Seção de busca e filtros */}
         <div className="flex flex-col sm:flex-row w-full max-w-2xl gap-2 mx-auto mt-8 justify-center bg-gray-300 p-2 rounded-lg shadow-md">
           <Autocomplete
@@ -206,6 +182,28 @@ export const Concert = () => {
           </Paper>
         </div>
       </ThemeProvider>
+              {/* 📌 Componente do calendário com eventos marcados */}
+              <div className="flex justify-center my-6">
+          <Paper
+            sx={{
+              backgroundColor: "rgba(150, 150, 150, 0.2)", // Fundo escuro
+              backdropFilter: "blur(10px)",
+              borderRadius: 3,
+              boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+              padding: 2,
+              maxWidth: "550px", // ✅ Aumentado para se ajustar melhor
+            }}
+          >
+            <Calendar
+              concerts={concerts} // ✅ Apenas os shows filtrados são exibidos
+              originalConcerts={originalConcerts} // ✅ Mantém os pontos vermelhos no calendário
+              selectedDate={selectedDate}
+              setSelectedDate={setSelectedDate}
+              onFilterByDate={handleFilterByDate}
+              onClearFilter={handleClearFilter}
+            />
+          </Paper>
+        </div>
     </div>
   );
 };
