@@ -33,9 +33,6 @@ export default function NavbarLinks() {
             open={Boolean(anchorEl)}
             onClose={handleMenuClose}
           >
-            <MenuItem component={Link} to="/" onClick={handleMenuClose}>
-              Local
-            </MenuItem>
             <MenuItem component={Link} to="/palcos" onClick={handleMenuClose}>
               Palco
             </MenuItem>
@@ -58,7 +55,6 @@ export default function NavbarLinks() {
         </>
       ) : (
         <div className="flex gap-4 items-center">
-          <NavLink to="/">Local</NavLink>
           <NavLink to="/palcos">Palco</NavLink>
           <NavLink to="/shows">Shows</NavLink>
 
