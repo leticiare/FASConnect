@@ -31,14 +31,18 @@ const LayerControl = ({ layers, layerIcons }: LayerControlProps) => {
 
   useEffect(() => {
     // Criar camada de controle personalizada
-    const layerControl = L.control.layers({}, layers, { collapsed: true }).addTo(map);
+    const layerControl = L.control
+      .layers({}, layers, { collapsed: true })
+      .addTo(map);
 
     // Adicionar todas as camadas ao mapa por padrão
     Object.values(layers).forEach((group) => group.addTo(map));
 
     // Modificar a aparência do controle de camadas
     setTimeout(() => {
-      const controlElement = document.querySelector(".leaflet-control-layers-overlays");
+      const controlElement = document.querySelector(
+        ".leaflet-control-layers-overlays"
+      );
 
       if (controlElement) {
         controlElement.querySelectorAll("label").forEach((label) => {
@@ -55,7 +59,6 @@ const LayerControl = ({ layers, layerIcons }: LayerControlProps) => {
             iconElement.width = 20;
             iconElement.height = 20;
             iconElement.style.marginRight = "8px";
-            
 
             // Mover o checkbox para o novo container
             const checkbox = label.querySelector("input");
@@ -92,11 +95,14 @@ export const Mapa = () => {
 
   // Criar grupos de camadas e armazenar os ícones
   const layerGroups: Record<string, LayerGroup> = {};
-  const layerIcons: Record<string, string> = {}; // 
+  const layerIcons: Record<string, string> = {}; //
 
-  Object.entries(iconsData).forEach(([category, value]) => {
-    const typedValue = value as unknown as IconData; 
-    const correctedSize: [number, number] = [typedValue.size[0] ?? 25, typedValue.size[1] ?? 35]; 
+  Object.entries(iconsData).forEach(([value]) => {
+    const typedValue = value as unknown as IconData;
+    const correctedSize: [number, number] = [
+      typedValue.size[0] ?? 25,
+      typedValue.size[1] ?? 35,
+    ];
 
     const icon = L.icon({
       iconUrl: typedValue.icon,
@@ -106,13 +112,12 @@ export const Mapa = () => {
     });
 
     // Criar marcadores e agrupá-los em uma LayerGroup
-// Criar marcadores e agrupá-los em uma LayerGroup
-const markers = typedValue.locations.map((location) =>
-  L.marker(location.position as LatLngTuple, { icon }).bindPopup(
-    `<b>${location.label}:</b> <br> ${location.description}`
-  )
-);
-
+    // Criar marcadores e agrupá-los em uma LayerGroup
+    const markers = typedValue.locations.map((location) =>
+      L.marker(location.position as LatLngTuple, { icon }).bindPopup(
+        `<b>${location.label}:</b> <br> ${location.description}`
+      )
+    );
 
     // Adicionar grupo e armazenar ícone para exibição no menu
     layerGroups[typedValue.name] = L.layerGroup(markers);
