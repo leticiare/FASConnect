@@ -12,6 +12,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import { Star, StarBorder } from "@mui/icons-material";
 import useFavorites from "../hooks/useFavorites"; // Hook para favoritar artistas
+import { formatDateTime } from "../utils/dateUtils";
 
 export interface CardWithImageProps {
   content: Concert;
@@ -75,7 +76,7 @@ function CardWithImage({ content }: CardWithImageProps) {
           </div>
           <div className="flex mt-4 gap-1">
             <DateRangeIcon />
-            {content.startDate}
+            {formatDateTime(content.startDate)}
           </div>
         </CardContent>
       </Card>

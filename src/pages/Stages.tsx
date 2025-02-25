@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { CircularProgress, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { getConcerts, getStages } from "../services/api";
 import { Concert } from "../types/Concerts";
@@ -27,29 +27,40 @@ export const Stages = () => {
   }, []);
   return (
     <>
-      <div className="h-full flex flex-col">
+      <div className="h-full flex flex-col p-2">
         <div className="w-4/5 m-auto text-center my-8">
           <Typography
             variant="h3"
-            fontFamily="Delius Unicase"
             component="div"
             color="#fff"
+            fontFamily="Modak"
           >
             Palcos
           </Typography>
           <p className="text-white text-xl">
-            Abaixo, conheça os palcos queAbaixo, conheça os palcos que vão
-            receber as maiores atrações do FASC 2077! Confira as programações,
-            horários e artistas que vão passar por cada um deles!
+            Abaixo, conheça os palcos que vão receber as maiores atrações do
+            FASC 2077! Confira as programações, horários e artistas que vão
+            passar por cada um deles!
           </p>
         </div>
-        <Grid container spacing={3} justifyContent="center">
-          {stages.map((stage, index) => (
-            <Grid item key={index}>
-              <StageCard stage={stage} artists={concerts} />
-            </Grid>
-          ))}
-        </Grid>
+        {loading ? (
+          <div className="h-screen flex justify-center items-center">
+            <CircularProgress color="inherit" />
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 max-w-screen-lg mx-auto">
+            {stages.map((stage, index) => (
+              <div key={index} className="flex justify-center w-full">
+                <StageCard
+                  stage={stage}
+                  artists={concerts.filter(
+                    (concert) => concert.location == stage.name
+                  )}
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </>
   );

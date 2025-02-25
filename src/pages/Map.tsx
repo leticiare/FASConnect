@@ -8,6 +8,7 @@ import iconsData from "./data/iconsData.json";
 interface LocationData {
   label: string;
   position: LatLngTuple;
+  description: string;
 }
 
 // Interface para os ícones e tamanhos
@@ -105,9 +106,13 @@ export const Mapa = () => {
     });
 
     // Criar marcadores e agrupá-los em uma LayerGroup
-    const markers = typedValue.locations.map((location) =>
-      L.marker(location.position as LatLngTuple, { icon }).bindPopup(location.label)
-    );
+// Criar marcadores e agrupá-los em uma LayerGroup
+const markers = typedValue.locations.map((location) =>
+  L.marker(location.position as LatLngTuple, { icon }).bindPopup(
+    `<b>${location.label}:</b> <br> ${location.description}`
+  )
+);
+
 
     // Adicionar grupo e armazenar ícone para exibição no menu
     layerGroups[typedValue.name] = L.layerGroup(markers);

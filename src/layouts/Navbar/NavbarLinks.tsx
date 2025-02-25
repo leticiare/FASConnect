@@ -33,26 +33,34 @@ export default function NavbarLinks() {
             open={Boolean(anchorEl)}
             onClose={handleMenuClose}
           >
-            <MenuItem component={Link} to="/" onClick={handleMenuClose}>
-              Local
-            </MenuItem>
             <MenuItem component={Link} to="/palcos" onClick={handleMenuClose}>
               Palco
             </MenuItem>
             <MenuItem component={Link} to="/shows" onClick={handleMenuClose}>
               Shows
             </MenuItem>
-            <MenuItem component={Link} to="/" onClick={handleMenuClose}>
+
+            <MenuItem component={Link} to="/map" onClick={handleMenuClose}>
+              Mapa
+            </MenuItem>
+
+            <MenuItem
+              component={Link}
+              to="/favoritos"
+              onClick={handleMenuClose}
+            >
               Minha Programação
             </MenuItem>
           </Menu>
         </>
       ) : (
         <div className="flex gap-4 items-center">
-          <NavLink to="/">Local</NavLink>
           <NavLink to="/palcos">Palco</NavLink>
           <NavLink to="/shows">Shows</NavLink>
-          <Fab variant="extended" size="small" onClick={() => navigate("/")}>
+
+          <NavLink to="/Map">Mapa</NavLink>
+
+          <Fab variant="extended" onClick={() => navigate("/favoritos")}>
             Minha Programação
           </Fab>
         </div>

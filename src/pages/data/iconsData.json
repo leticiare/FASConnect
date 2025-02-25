@@ -155,15 +155,15 @@
                     -11.015609,
                     -37.206922
                 ],
-                "description": "Palco principal do evento com shows e apresentações."
+                "description": "Descrito poeticamente pelo historiador Manoel dos Passos de Oliveira Telles, na sua primeira edição de 1903, em termos como: “Sua estatura real é imensuravel justamente pela falta de uma bitola. Não é tão antigo como uma tradição nem novo como uma esperança; mas nós, se o conhecemos é ennevoado e esquivo, embora com esse colorido prismático da luz que se côa através de gotas tenuissimas”. Destacou-se como orador sacro, e também atuou como professor, poeta e, de modo particular, como músico. Contudo, apesar de tratar-se de uma personalidade reconhecida no meio sociocultural sergipano, o levantamento bibliográfico permanece ainda escasso relativamente a este frade."
             },
             {
-                "label": "Palco Samba na Bica",
+                "label": "Música na Igreja",
                 "position": [
                     -11.014214,
                     -37.207652
                 ],
-                "description": "Espaço dedicado ao samba e ritmos tradicionais."
+                "description": "A Igreja de Nossa Senhora do Rosário dos Homens Pretos foi construída em 1746[1] pela irmandade de negros da cidade. Irmandades religiosas se formaram em todo o Brasil durante o período colonial, incluindo entre os escravos trazidos da África, que eram obrigados a se converterem ao catolicismo."
             },
             {
                 "label": "Palco João Bebe Água",
@@ -171,7 +171,15 @@
                     -11.013403,
                     -37.205329
                 ],
-                "description": "Apresentações musicais e performances culturais diversas."
+                "description": "Palco em homenagem a João Bebe-Água, que foi presidente da Câmara dos Vereadores de São Cristóvão e líder de uma Irmandade de Amparo dos Homens Pardos. De acordo com a lenda, ele liderou uma rebelião de 400 homens contra a transferência da capital para Santo Antônio de Aracaju. João morreu pobre e desacreditado, ainda sonhando com São Cristóvão como capital. Seu apelido “Bebe-Água” é uma referência a seu suposto gosto por bebidas alcoólicas, mas ele teve uma carreira política ativa e desempenhou cargos importantes, incluindo juiz de paz."
+            },
+            {
+                "label": "Palco Samba na Bica",
+                "position": [
+                    -11.014093,
+                    -37.207212
+                ],
+                "description": "Popularmente conhecida como Bica dos Pintos, esse espaço natural é uma grande referência em São Cristóvão quando o assunto é turismo e lazer. Com décadas de história, o parque possui significativa presença na memória de muitos moradores e turistas da Cidade Mãe."
             }
         ]
     },
@@ -257,14 +265,6 @@
             35
         ],
         "locations": [
-            {
-                "label": "Exposição de Pintura",
-                "position": [
-                    -11.014093,
-                    -37.207212
-                ],
-                "description": "Mostra de artistas locais com pinturas temáticas."
-            },
             {
                 "label": "Ateliê ao Vivo",
                 "position": [
