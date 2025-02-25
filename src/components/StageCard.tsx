@@ -12,6 +12,7 @@ import { Concert } from "../types/Concerts";
 import { Stage } from "../types/Stage";
 import darkTheme from "../style/theme";
 import CardBar from "./CardBar";
+import CustomModal from "./CustomModal";
 
 type StageCardProps = {
   stage: Stage;
@@ -45,10 +46,15 @@ const StageCard: React.FC<StageCardProps> = ({ stage, artists }) => {
             {stage.history}
           </Typography>
 
-          {/* Lista de artistas (Expansível) */}
-          <Collapse in={showArtists}>
+          {/* Lista de artistas (Modal) */}
+          <CustomModal
+            open={showArtists}
+            onClose={() => setShowArtists(!showArtists)}
+          >
             <Typography variant="body2" mt={2}>
-              <strong>Artistas:</strong>
+              <strong className="text-white mb-2 text-lg">
+                Artistas do {stage.name}:
+              </strong>
             </Typography>
             {artists.length > 0 ? (
               <ul className="flex flex-col gap-2">
@@ -61,7 +67,7 @@ const StageCard: React.FC<StageCardProps> = ({ stage, artists }) => {
                 Nenhum artista confirmado.
               </Typography>
             )}
-          </Collapse>
+          </CustomModal>
         </CardContent>
 
         {/* Botão colado no final do Card */}
@@ -71,7 +77,7 @@ const StageCard: React.FC<StageCardProps> = ({ stage, artists }) => {
             size="small"
             onClick={() => setShowArtists(!showArtists)}
           >
-            {showArtists ? "Ocultar artistas" : "Ver artistas"}
+            Ver artistas
           </Fab>
         </Box>
       </Card>
