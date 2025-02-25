@@ -31,7 +31,6 @@ interface CalendarProps {
 }
 
 export default function Calendar({ concerts, originalConcerts, selectedDate, setSelectedDate, onFilterByDate, onClearFilter }: CalendarProps) {
-    // 🔹 Agora usamos `originalConcerts` para garantir que os pontos vermelhos sempre apareçam
     const eventDates = React.useMemo(
         () => originalConcerts.map((concert) => dayjs(concert.startDate).format("YYYY-MM-DD")), 
         [originalConcerts]
@@ -56,13 +55,13 @@ export default function Calendar({ concerts, originalConcerts, selectedDate, set
                         value={selectedDate}
                         onChange={(newValue) => setSelectedDate(newValue)}
                         slots={{
-                            actionBar: () => null, // 🔹 Remove os botões "Cancelar" e "Ok"
+                            actionBar: () => null,
                         }}
                         slotProps={{
                             layout: {
                                 sx: {
                                     backgroundColor: "rgba(150, 150, 150, 0.2)",
-                                    backdropFilter: "blur(4em)",
+                                    backdropFilter: "blur(1em)",
                                     borderRadius: 2,
                                     boxShadow: "0 4px 12px rgba(0,0,0,0.5)",
                                 },

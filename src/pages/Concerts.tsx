@@ -168,7 +168,6 @@ export const Concert = () => {
               boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
               padding: 2,
               maxWidth: "550px", // Ajustado para telas maiores
-              width: "100%", // Para que o calendário ocupe toda a largura disponível
             }}
           >
             <Calendar
