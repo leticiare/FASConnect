@@ -58,7 +58,7 @@ export default function NavbarLinks() {
           <NavLink to="/palcos">Palco</NavLink>
           <NavLink to="/shows">Shows</NavLink>
 
-          <NavLink to="/Map">Mapa</NavLink>
+          <NavLink to="/map">Mapa</NavLink>
 
           <Fab variant="extended" onClick={() => navigate("/favoritos")}>
             Minha Programação

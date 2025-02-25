@@ -8,7 +8,6 @@ import iconsData from "./data/iconsData.json";
 interface LocationData {
   label: string;
   position: LatLngTuple;
-  description: string;
 }
 
 // Interface para os ícones e tamanhos
@@ -97,7 +96,7 @@ export const Mapa = () => {
   const layerGroups: Record<string, LayerGroup> = {};
   const layerIcons: Record<string, string> = {}; //
 
-  Object.entries(iconsData).forEach(([value]) => {
+  Object.entries(iconsData).forEach(([category, value]) => {
     const typedValue = value as unknown as IconData;
     const correctedSize: [number, number] = [
       typedValue.size[0] ?? 25,
@@ -112,10 +111,9 @@ export const Mapa = () => {
     });
 
     // Criar marcadores e agrupá-los em uma LayerGroup
-    // Criar marcadores e agrupá-los em uma LayerGroup
     const markers = typedValue.locations.map((location) =>
       L.marker(location.position as LatLngTuple, { icon }).bindPopup(
-        `<b>${location.label}:</b> <br> ${location.description}`
+        location.label
       )
     );
 
