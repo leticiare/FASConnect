@@ -18,7 +18,7 @@ function App() {
       <div className="min-h-screen flex flex-col md:flex-row items-center md:items-start justify-between p-6 md:p-12 mt-12">
 
         { /* Definindo a div que conterá as imagens */ }
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start p-8">
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start p-6">
           { /* Primeira imagem */ }
           <div className="w-full flex justify-center mb-4">
             <img src={NSCimg} alt="NSC" className="max-w-full h-auto md:w-2/3" />
@@ -31,7 +31,7 @@ function App() {
         </div>
 
         { /* Container do texto */ }
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="w-full md:w-1/2 flex flex-col items-center text-center md:text-left">
           <p className="text-lg md:text-xl text-neutral-500 leading-relaxed w-full md:w-8/12">
             Em 2077, o Festival de Artes de São Cristóvão (FASC) completa 105 anos de celebração da cultura, da arte e da tradição.
             Ao longo de mais de um século, o FASC se consolidou como um dos maiores e mais importantes encontros artísticos do mundo,
@@ -40,9 +40,9 @@ function App() {
           </p>
 
           { /* Botão centralizado no mobile e abaixo do texto na Landing Page */ }
-          <div className="flex justify-center md:justify-start mt-12 w-full">
+          <div className="flex justify-center items-center  mt-12 w-full">
             <button
-              className="py-3 px-12 rounded-3xl border border-white text-center text-lg text-white cursor-pointer transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110
+              className="py-3 px-11 rounded-3xl border border-white text-center text-lg text-white cursor-pointer transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110
                           hover:shadow-lg active:bg-neutral-900 active:opacity-80 active:shadow-none shadow-neutral-700 font-medium"
               type="button">
               Conheça as atrações 
