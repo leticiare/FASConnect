@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { CircularProgress, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { getConcerts, getStages } from "../services/api";
 import { Concert } from "../types/Concerts";
@@ -43,18 +43,24 @@ export const Stages = () => {
             passar por cada um deles!
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 max-w-screen-lg mx-auto">
-          {stages.map((stage, index) => (
-            <div key={index} className="flex justify-center w-full">
-              <StageCard
-                stage={stage}
-                artists={concerts.filter(
-                  (concert) => concert.location == stage.name
-                )}
-              />
-            </div>
-          ))}
-        </div>
+        {loading ? (
+          <div className="h-screen flex justify-center items-center">
+            <CircularProgress color="inherit" />
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 max-w-screen-lg mx-auto">
+            {stages.map((stage, index) => (
+              <div key={index} className="flex justify-center w-full">
+                <StageCard
+                  stage={stage}
+                  artists={concerts.filter(
+                    (concert) => concert.location == stage.name
+                  )}
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </>
   );
