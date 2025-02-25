@@ -158,7 +158,7 @@
                 "description": "Palco principal do evento com shows e apresentações."
             },
             {
-                "label": "Palco Samba na Bica",
+                "label": "Música na Igreja",
                 "position": [
                     -11.014214,
                     -37.207652
@@ -172,6 +172,14 @@
                     -37.205329
                 ],
                 "description": "Apresentações musicais e performances culturais diversas."
+            },
+            {
+                "label": "Palco Samba na Bica",
+                "position": [
+                    -11.014093,
+                    -37.207212
+                ],
+                "description": "Mostra de artistas locais com pinturas temáticas."
             }
         ]
     },
@@ -257,14 +265,6 @@
             35
         ],
         "locations": [
-            {
-                "label": "Exposição de Pintura",
-                "position": [
-                    -11.014093,
-                    -37.207212
-                ],
-                "description": "Mostra de artistas locais com pinturas temáticas."
-            },
             {
                 "label": "Ateliê ao Vivo",
                 "position": [

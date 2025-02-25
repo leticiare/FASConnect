@@ -44,12 +44,12 @@ export default function Calendar({ concerts, originalConcerts, selectedDate, set
                     elevation={5}
                     sx={{
                         backgroundColor: "rgba(150, 150, 150, 0.2)", 
-                        borderRadius: 3,
+                        borderRadius: 7,
                         backdropFilter: "blur(10px)", 
-                        boxShadow: "0 4px 12px rgba(0,0,0,0.5)",
+                        boxShadow: "0 4px 5em rgba(0,0,0,0.5)",
                         width: "100%", 
                         maxWidth: "550px", 
-                        padding: "16px", 
+                        padding: "16px",
                     }}
                 >
                     <StaticDatePicker
@@ -62,7 +62,7 @@ export default function Calendar({ concerts, originalConcerts, selectedDate, set
                             layout: {
                                 sx: {
                                     backgroundColor: "rgba(150, 150, 150, 0.2)",
-                                    backdropFilter: "blur(1em)",
+                                    backdropFilter: "blur(4em)",
                                     borderRadius: 2,
                                     boxShadow: "0 4px 12px rgba(0,0,0,0.5)",
                                 },
@@ -104,7 +104,7 @@ export default function Calendar({ concerts, originalConcerts, selectedDate, set
                                                     borderRadius: "50%",
                                                     position: "absolute",
                                                     bottom: -2,
-                                                    left: "100%",
+                                                    left: "140%",
                                                     transform: "translateX(-50%)",
                                                 },
                                             }}
