@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Molengo&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 @theme {
     --color-primary: #1E1E1E; 
@@ -28,3 +30,18 @@
     scroll-behavior: smooth;
   }
   
+
+  body {
+    margin: 0; 
+    padding: 0; 
+    min-height: 100vh; 
+    background-image: url('public/wallpaper.png');    
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+  }
+
+  .fasc-text {
+    font-family: "Molengo", sans-serif;
+  }
