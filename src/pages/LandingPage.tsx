@@ -5,7 +5,7 @@ import img2077 from "../../public/2077.png";
 export const LandingPage = () => {
   return (
     <>
-      <div className="min-h-screen flex flex-col md:flex-row items-center md:items-start justify-between p-6 md:p-12 mt-12 gap-3">
+      <div className=" bg-[url(../../wallpaper.jpg)] flex flex-col md:flex-row items-center md:items-start justify-between p-6 md:p-12 mt-12 gap-3">
         {/* Definindo a div que conterá as imagens */}
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start mt-4">
           {/* Primeira imagem */}
