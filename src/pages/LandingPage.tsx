@@ -5,9 +5,9 @@ import img2077 from "../../public/2077.png";
 export const LandingPage = () => {
   return (
     <>
-      <div className=" bg-[url(../../wallpaper.jpg)] flex flex-col md:flex-row items-center md:items-start justify-between p-6 md:p-12 mt-12 gap-3">
+      <div className=" h-full bg-[url(../../public/wallpaper.png)] bg-no-repeat bg-fixed bg-cover bg-center  flex flex-col md:flex-row items-center md:items-start justify-between p-6 md:p-12 gap-3">
         {/* Definindo a div que conterá as imagens */}
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start mt-4">
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start mt-12">
           {/* Primeira imagem */}
           <div className="w-full flex justify-center">
             <img src={NSCimg} alt="NSC" className="max-w-3/4 h-auto md:w-2/3" />
@@ -24,7 +24,7 @@ export const LandingPage = () => {
         </div>
 
         {/* Container do texto */}
-        <div className="w-full md:w-1/2 flex flex-col items-center text-center md:text-left">
+        <div className="w-full md:w-1/2 flex flex-col items-center text-center md:text-left mt-12">
           <p className="text-lg md:text-xl text-neutral-500 leading-relaxed w-full md:w-8/12">
             Em 2077, o Festival de Artes de São Cristóvão (FASC) completa 105
             anos de celebração da cultura, da arte e da tradição. Ao longo de
