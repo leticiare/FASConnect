@@ -1,7 +1,7 @@
 {
     "police": {
         "name": "Polícia",
-        "icon": "../../public/icons/carro-de-policia.png",
+        "icon": "/public/carro-de-policia.png",
         "size": [
             35,
             35
@@ -59,7 +59,7 @@
     },
     "medical": {
         "name": "Atendimento Médico",
-        "icon": "../../public/icons/ambulancia.png",
+        "icon": "/public/ambulancia.png",
         "size": [
             35,
             35
@@ -101,7 +101,7 @@
     },
     "bathroom": {
         "name": "Banheiro Público",
-        "icon": "../../public/icons/banheiro-publico.png",
+        "icon": "/public/banheiro-publico.png",
         "size": [
             35,
             35
@@ -143,7 +143,7 @@
     },
     "stage": {
         "name": "Palco",
-        "icon": "../../public/icons/palco.png",
+        "icon": "/public/palco.png",
         "size": [
             30,
             40
@@ -185,7 +185,7 @@
     },
     "food": {
         "name": "Alimentação",
-        "icon": "../../public/icons/prato.png",
+        "icon": "/public/prato.png",
         "size": [
             35,
             35
@@ -259,7 +259,7 @@
     },
     "art": {
         "name": "Arte e Cultura",
-        "icon": "../../public/icons/palete.png",
+        "icon": "/public/palete.png",
         "size": [
             35,
             35
