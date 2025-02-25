@@ -159,7 +159,7 @@ export const Concert = () => {
       </div>
       <div className="flex flex-col lg:flex-row justify-center lg:items-start items-center gap-6">
         {/* 📌 Componente do calendário com eventos marcados */}
-        <div className="flex justify-center my-6 w-4/5">
+        <div className="flex justify-center my-6">
           <Paper
             sx={{
               backgroundColor: "rgba(150, 150, 150, 0.2)", // Fundo escuro
